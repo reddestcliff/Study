@@ -1,5 +1,5 @@
 # Study
-## Python
+## Python2
 
 
 ## Java
