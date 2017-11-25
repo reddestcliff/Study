@@ -4,7 +4,7 @@ import csv
 import filecmp
 import os
 
-def compare(folder1, folder2, output, output_txt=False, output_csv=False):
+def compare(folder1, folder2, output='', output_txt=False, output_csv=False):
     """Compare contents of two folders and write a report of the results."""
 
     report = _recursive_dircmp(folder1, folder2)
@@ -18,6 +18,8 @@ def compare(folder1, folder2, output, output_txt=False, output_csv=False):
 
     if output_csv:
         _write_to_csv(folder1, folder2, output, report)
+	
+	return report
 
 
 def _recursive_dircmp(folder1, folder2, prefix='.'):
@@ -37,12 +39,12 @@ def _recursive_dircmp(folder1, folder2, prefix='.'):
     if comparison.common_dirs:
         for folder in comparison.common_dirs:
             # Update prefix to include new sub_folder
-            prefix += '/' + folder
+            newprefix = prefix + '/' + folder
 
             # Compare common folder and add results to the report
             sub_folder1 = os.path.join(folder1, folder)
             sub_folder2 = os.path.join(folder2, folder)
-            sub_report = _recursive_dircmp(sub_folder1, sub_folder2, prefix)
+            sub_report = _recursive_dircmp(sub_folder1, sub_folder2, newprefix)
 
             # Add results from sub_report to main report
             for key, value in sub_report.items():
