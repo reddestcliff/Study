@@ -18,8 +18,8 @@ def compare(folder1, folder2, output='', output_txt=False, output_csv=False):
 
     if output_csv:
         _write_to_csv(folder1, folder2, output, report)
-	
-	return report
+
+    return report
 
 
 def _recursive_dircmp(folder1, folder2, prefix='.'):

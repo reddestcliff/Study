@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os
 import sys
@@ -10,7 +10,7 @@ import filecmp
 
 
 def main():
-	print ' main '
+	print('main')
 	'''
 	arg_left = os.path.normpath(sys.argv[1])
 	arg_right = os.path.normpath(sys.argv[2])
