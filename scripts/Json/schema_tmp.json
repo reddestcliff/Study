@@ -1,0 +1,99 @@
+{
+	"type": "object",
+	"$schema": "http: //json-schema.org/draft-03/schema",
+	"id": " # ",
+	"required": true,
+	"properties": {
+		"registrants": {
+			"type": "array",
+			"id": "registrants",
+			"required": true,
+			"items": {
+				"type": "object",
+				"description":"abcdefg, this is some random descriptions, is it work????",
+				"required": false,
+				"properties": {
+					"address": {
+						"type": "object",
+						"id": "address",
+						"required": true,
+						"properties": {
+							"city": {
+								"type": "string",
+								"id": "city",
+								"required": true
+							},
+							"country": {
+								"type": "string",
+								"id": "country",
+								"required": false
+							},
+							"line1": {
+								"type": "string",
+								"id": "line1",
+								"required": true
+							},
+							"line2": {
+								"type": "string",
+								"id": "line2",
+								"required": false
+							},
+							"postalCode": {
+								"type": "string",
+								"id": "postalCode",
+								"required": true
+							},
+							"premise": {
+								"type": "string",
+								"id": "premise",
+								"required": true,
+								"enum": [
+									"work",
+									"home",
+									"other"
+								]
+							},
+							"stateOrProvince": {
+								"type": "string",
+								"id": "stateOrProvince",
+								"required": true
+							}
+						}
+					},
+					"firstName": {
+						"type": "string",
+						"id": "firstName",
+						"required": true
+					},
+					"lastName": {
+						"type": "string",
+						"id": "lastName",
+						"required": true
+					},
+					"phoneNumber": {
+						"type": "object",
+						"id": "phoneNumber",
+						"required": true,
+						"properties": {
+							"channel": {
+								"type": "string",
+								"id": "channel",
+								"required": true,
+								"enum": [
+									"cell",
+									"work",
+									"home"
+								]
+							},
+							"number": {
+								"type": "string",
+								"id": "number",
+								"required": true
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

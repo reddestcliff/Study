@@ -16,6 +16,11 @@
 
 ## System Design
 https://github.com/donnemartin/system-design-primer/blob/master/README.md
-test
+
+# Npp plugin
+* https://github.com/nea/MarkdownViewerPlusPlus/releases
+* https://sourceforge.net/projects/jsminnpp/
+
+
 
 
