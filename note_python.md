@@ -66,7 +66,8 @@ List append performance is hit and miss because it uses realloc() under the hood
 ## Python2
 
 ## Tips
-*** run both python2 and 3
+
+* run both python2 and 3
 https://stackoverflow.com/questions/341184/can-i-install-python-3-x-and-2-x-on-the-same-computer
 https://stackoverflow.com/questions/15912063/how-do-i-run-python-2-and-3-in-windows-7/17245543#17245543
 There is a better way of coexistence/launching of Python 2 and Python 3 on Windows. The Python 3.3 introduced the Python launcher for Windows (see http://www.python.org/dev/peps/pep-0397/).
@@ -75,7 +76,7 @@ After installation of Python 3.3, the py.exe and pyw.exe is copied to your c:\Wi
 
 The best of all is that #!python2 in the script causes lauching via Python 2, the #!python3 causes launching the script via Python 3. This way, you can use scripts for both versions of Python, and you can lauch them the unified way -- py script.py or by just clicking on the script icon.
 
-*** spyder
+* spyder
 CTRL+SPACE autocompletes commands, function names, variable names, methods; very useful.
 CTRL + <RETURN> executes the current cell (menu enty Run -> Run cell). A cell is defined as the code between two lines which start with the agreed tag #%%.
 ALT + <CURSOR UP> moves the current line up. If multiple lines are highlighted, they are moved up together. ALT+<CURSOR DOWN> works correspondingly moving line(s) down.
