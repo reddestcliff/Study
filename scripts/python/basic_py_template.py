@@ -9,9 +9,9 @@ sys.path.append(os.path.join(dirPath,'package'))
 
 
 def main():
-	print ' main '
+    print ' main '
 
 
 if __name__ == "__main__":
-	main()
+    main()
 
