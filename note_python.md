@@ -1,5 +1,8 @@
 # Python
 
+### bpython interpreter
+https://bpython-interpreter.org/
+
 ### pytest
 http://pythontesting.net/framework/pytest/pytest-introduction/
 
@@ -82,7 +85,51 @@ The best of all is that #!python2 in the script causes lauching via Python 2, th
 * The command to get the figures to appear inline in the IPython console is %matplotlib inline.
 * The command to get figures appear in their own window (which technically is a QT windown) is %matplotlib qt.
 
+### np array vs matrix
+The main advantage of numpy matrices is that they provide a convenient notation for matrix multiplication: if a and b are matrices, then a*b is their matrix product.
+numpy arrays consistently abide by the rule that operations are applied element-wise (except for the new @ operator). Thus, if a and b are numpy arrays, then a*b is the array formed by multiplying the components element-wise:
+To obtain the result of matrix multiplication, you use np.dot
+Since a is a matrix, a**2 returns the matrix product a*a. Since c is an ndarray, c**2 returns an ndarray with each component squared element-wise.
+The main advantage of numpy arrays is that they are more general than 2-dimensional matrices. 
+What happens when you want a 3-dimensional array? Then you have to use an ndarray, not a matrix object. 
 
 
+
+
+
+### numpy
+http://scipy.github.io/old-wiki/pages/Numpy_Example_List#argmax.28.29
+
+* array_split(), argsort(axis=-1, kind="quicksort"), x.astype(None) # None implies converting to the default (float64), average(a,weights=w) # weighted average,  a.clip(min=10,max=20)
+*```python
+ a = np.random.rand(1,8)
+ [x, y, xx, yy] = np.array_split(a,4,axis = 1)
+```
+
+* numpy 1d vector prod 
+the following gives same result
+array([[ 3,  2,  4],
+       [ 0,  0,  0],
+       [15, 10, 20]])
+```python
+a = np.array([1,0,5])
+b = np.array([3,2,4])
+np.outer(a,b)
+a = a[:,np.newaxis]
+b = b[np.newaxis,:]
+np.dot(a,b)
+```
+* where()
+where(...)
+    where(condition, [x, y])  Return elements, either from `x` or `y`, depending on `condition`. 
+    If only `condition` is given, return ``condition.nonzero()``.
+>>> from numpy import *
+>>> a = array([3,5,7,9])
+>>> b = array([10,20,30,40])
+>>> c = array([2,4,6,8])
+>>> where(a <= 6, b, c)
+array([10, 20, 6, 8])	
+	
+ * r_, hstack, vstack, column_stack, concatenate, bmat, s_
 
 
